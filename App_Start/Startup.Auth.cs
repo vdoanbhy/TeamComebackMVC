@@ -59,11 +59,11 @@ namespace TeamComeback
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "748438445969-0b8r3qq0gvb0nc660qpjd85bvcgbli60.apps.googleusercontent.com",
+                ClientSecret = "4ji2sVeHbDRWDfWDtBwHb5Zw"
+            });
         }
     }
 }
