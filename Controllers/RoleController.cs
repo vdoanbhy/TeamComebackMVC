@@ -9,6 +9,7 @@ using TeamComeback.Models;
 
 namespace TeamComeback.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
         private ApplicationRoleManager _roleManager;
