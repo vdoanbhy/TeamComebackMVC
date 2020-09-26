@@ -6,7 +6,6 @@ using System.Web.Mvc;
 
 namespace TeamComeback.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         

@@ -9,7 +9,7 @@ using TeamComeback.Models;
 
 namespace TeamComeback.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class RoleController : Controller
     {
         private ApplicationRoleManager _roleManager;
@@ -41,6 +41,8 @@ namespace TeamComeback.Controllers
                 list.Add(new RoleViewModel(role));           
             return View(list);
         }
+
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
