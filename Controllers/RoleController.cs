@@ -54,7 +54,7 @@ namespace TeamComeback.Controllers
             await RoleManager.CreateAsync(role);
             return RedirectToAction("Index");
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Edit(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
@@ -73,6 +73,7 @@ namespace TeamComeback.Controllers
             var role = await RoleManager.FindByIdAsync(id);
             return View(new RoleViewModel(role));
         }
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
